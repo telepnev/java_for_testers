@@ -7,12 +7,14 @@ import ru.stqa.geometry.figures.Triangle;
 
 import static ru.stqa.geometry.figures.Rectangle.printRectangleArea;
 import static ru.stqa.geometry.figures.Square.printSquareArea;
+import static ru.stqa.geometry.figures.Triangle.printTriangleArea;
 
 public class Geometry {
     public static void main(String[] args) {
         printSquareArea(new Square(5.0));
         printRectangleArea(new Rectangle(5.0, 4.0));
-        Triangle.printTriangleArea(6, 5, 2.2);
+        printTriangleArea(new Triangle(6, 5, 2.2));
+
     }
 
 }
