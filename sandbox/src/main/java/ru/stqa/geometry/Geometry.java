@@ -12,8 +12,9 @@ import static ru.stqa.geometry.figures.Triangle.printTriangleArea;
 public class Geometry {
     public static void main(String[] args) {
         printSquareArea(new Square(5.0));
-        printRectangleArea(new Rectangle(5.0, 4.0));
-        printTriangleArea(new Triangle(6, 5, 2.2));
+        printRectangleArea(new Rectangle(5.0, 4.0, 2.0));
+        printTriangleArea(new Triangle(5.0,5.0, 5.0));
+
     }
 
 }

@@ -1,6 +1,6 @@
 package ru.stqa.geometry.figures;
 
-public record Rectangle(double a, double b) {
+public record Rectangle(double a, double b, double v) {
     public static void printRectangleArea(Rectangle s) {
         String text = String.format("Площадь квадрата со стороной %.2f и %.2f = %.2f ", s.a, s.b, s.rectangle());
         System.out.println(text);
