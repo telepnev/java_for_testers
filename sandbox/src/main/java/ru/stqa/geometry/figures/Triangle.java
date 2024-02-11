@@ -20,7 +20,7 @@ public record Triangle(double a, double b, double c) {
         double geronResult = Math.sqrt(triangleArea);
 
         BigDecimal bd = new BigDecimal(geronResult);
-        // округление до ближайшего числа с указанной точностью
+
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         double result = bd.doubleValue();
         return result;
