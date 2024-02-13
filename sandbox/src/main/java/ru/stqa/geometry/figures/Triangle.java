@@ -15,12 +15,11 @@ public record Triangle(double a, double b, double c) {
     }
 
     public double calculateAreaTriangle() {
-        double semiperimeter = (this.a + this.b + this.c) / 2;
+        double semiperimeter = calculateTrianglePerimeter() / 2;
         double triangleArea = semiperimeter * ((semiperimeter - this.a) * (semiperimeter - this.b) * (semiperimeter - this.c));
         double geronResult = Math.sqrt(triangleArea);
 
         BigDecimal bd = new BigDecimal(geronResult);
-
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         double result = bd.doubleValue();
         return result;
