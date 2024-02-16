@@ -57,4 +57,18 @@ class TriangleTest {
         assertThrows(IllegalArgumentException.class, () -> new Triangle(1, 6, 2));
         assertThrows(IllegalArgumentException.class, () -> new Triangle(6, 2, 1));
     }
+    // 2.4 task
+
+    @Test
+    public void testEqualityTriangle() {
+        var r1 = new Triangle(5.0, 4.0, 3.0);
+        var r2 = new Triangle(5.0, 4.0, 3.0);
+        Assertions.assertTrue(r1.equals(r2));
+    }
+    @Test
+    public void testEqualityTriangle2() {
+        var r1 = new Triangle(5.0, 4.0, 3.0);
+        var r2 = new Triangle(3.0, 5.0, 5.0);
+        Assertions.assertTrue(r1.equals(r2));
+    }
 }

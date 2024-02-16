@@ -28,4 +28,30 @@ public class SquareTest {
         }
     }
 
+    @Test
+    public void testEqual() {
+        var s1 = new Square(5.0);
+        var s2 = new Square(5.0);
+        Assertions.assertEquals(s1, s2);
+    }
+    @Test
+    public void testNotEqual() {
+        var s1 = new Square(5.1);
+        var s2 = new Square(5.0);
+        Assertions.assertNotEquals(s1, s2);
+    }
+    @Test
+    public void testFail() {
+        var s1 = new Square(5.0);
+        var s2 = new Square(5.0);
+        Assertions.assertTrue(s1 == s2);
+    }
+
+    @Test
+    public void testPass() {
+        var s1 = new Square(5.0);
+        var s2 = new Square(5.0);
+        Assertions.assertTrue(s1.equals(s2));
+    }
+
 }
