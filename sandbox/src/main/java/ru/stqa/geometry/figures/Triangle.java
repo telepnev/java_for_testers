@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public record Triangle(double a, double b, double c) {
+    public Triangle {
+        if (a < 0 || b < 0 || c < 0) {
+            throw new IllegalArgumentException("Rectangle side should be non-negative");
+        }
+    }
     public static void printTriangleArea(Triangle s) {
         String text = String.format("Площадь треугольника со сторонами %.2f и %.2f и %.2f = %.2f ", s.a, s.b, s.c, s.calculateAreaTriangle());
         System.out.println(text);

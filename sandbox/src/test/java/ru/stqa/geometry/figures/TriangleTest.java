@@ -16,4 +16,13 @@ class TriangleTest {
     public void canCalculatePerimeter() {
         Assertions.assertEquals(6.9, new Triangle(2.1, 2.1, 2.7).calculateTrianglePerimeter());
     }
+    @Test
+    void cannotCreateTriangleWithNegativeSide() {
+        try {
+            new Triangle(1, 0, -1);
+            Assertions.fail();
+        } catch (IllegalArgumentException e) {
+            //ok
+        }
+    }
 }
